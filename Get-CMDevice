@@ -1,0 +1,9 @@
+# Windows is the worst when it comes to documentation. I hope Google finds this. 
+
+Issue: Get-CMDevice -name returns nothing
+Issue: Get-CMDevice -name blank
+
+Explanation: If you specify a single CMDevice, but do not have a collection specified - it searches "All Systems" collection which your account may or may not have access to.
+Fix: Get-CMDevice -CollectionName [Collection OR LimitingCollection the device can be found] -name [device name]
+
+# Yay no more eye bleeding. 
